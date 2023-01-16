@@ -13,3 +13,5 @@ variable "bucket_names" {
     default = ["raw", "processed", "curated"]
     type = list(string)
 }
+
+#teste
