@@ -1,16 +1,20 @@
 variable "environment" {
-    default = "prod"
-    type = string
-    description = "setup the environment"
+        description = "setup the environment"
 }
 
 variable "project_name" {
-    default = "data-platform"
-    description = "Nome do projeto"
+        description = "Nome do projeto"
 }
 
 variable "bucket_names" {
-    default = ["raw", "processed", "curated"]
-    type = list(string)
+        type = list(string)
 }
 
+variable "db_username" {
+        type = string
+}
+
+variable "db_password" {
+        type = string
+        sensitive = true
+}
