@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "buckets-stack" {
+resource "aws_s3_bucket" "buckets-natalia" {
   count  = length(var.bucket_names)
   bucket = "${var.project_name}-${var.bucket_names[count.index]}-${var.environment}"
   force_destroy = true
